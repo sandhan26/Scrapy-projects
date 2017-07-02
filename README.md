@@ -9,4 +9,4 @@ These are collection of some of my web scraping projects with scrapy. Feel free 
 
 ## Usage:
 1. `cd <project directory>`
-2. `scrapy crawl <spider name>`
+2. `scrapy crawl <spider name> -o <output file name>.<jl/json/csv>`
