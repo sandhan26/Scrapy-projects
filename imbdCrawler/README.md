@@ -1,5 +1,5 @@
 # IMBD website crawler
-Currently this project contains only one spider, which scrapes and stores all the oscar winning movies to a JSON line file.
+Currently this project contains only two spiders, one scrapes the oscar nominess and the other scrapes the oscar winners.
 
 ## Usage:
 * `scrapy crawl oscarWinners -o oscar-winners.jl`
