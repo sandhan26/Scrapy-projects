@@ -29,8 +29,10 @@ class MovieLoader(ItemLoader):
     Length_out = TakeFirst()
 
 
+
     Directors_in = MapCompose(str.strip)
     Directors_out = Join(",")
+
 
 
     Actors_in = MapCompose(str.strip)
@@ -46,9 +48,10 @@ class MovieLoader(ItemLoader):
     Income_in = MapCompose(lambda i:i.replace(",",""),float)
     Income_out = TakeFirst()
 
+
     Budget_in = MapCompose(lambda i:i.replace(",",""),float)
     Budget_out = TakeFirst()
-
+    
     Url_out = Join("")
 
     Server_out = Join("")
@@ -59,14 +62,13 @@ class MovieLoader(ItemLoader):
 
     Spider_out = Join("")
 
-
-class OscarwinnersSpider(CrawlSpider):
-    name = 'oscarWinners'
-    start_urls = ['http://www.imdb.com/search/title?count=100&groups=oscar_best_picture_winners&sort=year,desc&view=advanced&ref_=nv_ch_osc_2']
+class OscarnomineesSpider(CrawlSpider):
+    name = 'oscarNominees'
+    start_urls = ['http://www.imdb.com/list/ls057163321/?start=1&view=detail&sort=release_date_us:desc']
 
     rules = (
         Rule(LinkExtractor(restrict_xpaths=r'//*[@class="pagination"]')),
-        Rule(LinkExtractor(restrict_xpaths=r'//*[@class="lister-item-header"]'), callback='parse_item')
+        Rule(LinkExtractor(restrict_xpaths=r'//*[contains(@class,"list_item")]/*[@class="info"]/b'), callback='parse_item')
     )
 
     def parse_item(self, response):

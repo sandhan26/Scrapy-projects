@@ -95,22 +95,22 @@ ROBOTSTXT_OBEY = True
 
 
 # My Feed Exporters
-FEED_FORMAT = "jl"
-FEED_EXPORT_FIELDS=[
-        "Title",
-        "Description",
-        "Rating",
-        "Page",
-        "Directors",
-        "Actors",
-        "Genres",
-        "Length",
-        "Year",
-        "Votes",
-        "Income",
-        "Url",
-        "Project",
-        "Spider",
-        "Server",
-        "Date"]
-FEED_URI="oscar-winners-{}.jl".format(datetime.datetime.now())
+#FEED_FORMAT = "jsonlines"
+#FEED_EXPORT_FIELDS=[
+#        "Title",
+#        "Description",
+#        "Rating",
+#        "Directors",
+#        "Actors",
+#        "Genres",
+#        "Length",
+#        "Year",
+#        "Votes",
+#        "Income",
+#        "Budget",
+#        "Url",
+#        "Project",
+#        "Spider",
+#        "Server",
+#        "Date"]
+#FEED_URI="data.jl".format(datetime.datetime.now())

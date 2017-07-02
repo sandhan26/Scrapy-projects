@@ -10,7 +10,6 @@ from scrapy.loader.processors import MapCompose, TakeFirst
 class ImbdcrawlerItem(scrapy.Item):
     # Movie details
     Title = scrapy.Field()
-    Page = scrapy.Field()
     Description = scrapy.Field()
     Rating = scrapy.Field()
     Directors = scrapy.Field()
@@ -19,6 +18,7 @@ class ImbdcrawlerItem(scrapy.Item):
     Length = scrapy.Field()
     Year = scrapy.Field()
     Votes = scrapy.Field()
+    Budget = scrapy.Field()
     Income = scrapy.Field()
 
 
