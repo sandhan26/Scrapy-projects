@@ -1,5 +1,5 @@
 # IMBD website crawler
-Currently this project contains only two spiders, one scrapes the oscar nominess and the other scrapes the oscar winners.
+Currently this project contains two spiders, one scrapes the oscar nominees and the other scrapes the oscar winners.
 
 ## Usage:
 * `scrapy crawl oscarWinners -o oscar-winners.jl`
